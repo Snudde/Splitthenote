@@ -96,3 +96,10 @@ form {
   border-radius: 4px;
   margin-top: 20px;
 }
+
+#result-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
