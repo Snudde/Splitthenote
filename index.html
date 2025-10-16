@@ -5,10 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Split the note</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cossette+Titre:wght@400;700&family=Pixelify+Sans:wght@400..700&display=swap"
+      rel="stylesheet"
+    />
     <script src="/script.js" defer></script>
   </head>
   <body>
-    <div id="form-container" class="active">
+    <div id="form-container" class="active rotate-shadow">
       <h1>Split the note</h1>
       <form id="form">
         <label for="friends">Antal vänner</label>
@@ -21,8 +27,8 @@
       </form>
     </div>
 
-    <div id="result-container" class="hidden">
-      <h2>Splitta notan</h2>
+    <div id="result-container" class="hidden rotate-shadow">
+      <h2>Splitta notan!</h2>
       <p>Varje person ska betala: <span id="result"></span> kr.</p>
       <p>
         Resterande pengar skänkes till välgörenhet:

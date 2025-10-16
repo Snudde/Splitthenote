@@ -60,26 +60,72 @@ button {
   cursor: pointer;
 }
 
-#form-container {
+body {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  background: linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(246, 204, 255, 1) 100%
+  );
+  font-family: "Pixelify Sans", sans-serif;
+}
+
+#form-container,
+#result-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: rgba(255, 0, 225, 0.342);
+  padding: 30px;
+  border-radius: 10px;
+}
+
+h1 {
+  margin-bottom: 20px;
 }
 
 .active {
   display: block;
 }
 
+input {
+  border-radius: 10px;
+  margin-bottom: 8px;
+  padding: 5px;
+  border-color: gray;
+}
+
+input:active {
+  border-color: blue;
+}
+
 .hidden {
   display: none !important;
 }
 
-#btn {
+label {
+  align-self: flex-start;
+}
+
+#btn,
+#reset-btn {
   margin-top: 20px;
   padding: 10px;
-  background-color: rgb(164, 204, 244);
+  background-color: rgba(246, 204, 255, 1);
   border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+#btn:hover,
+#reset-btn:hover {
+  background-color: rgba(246, 204, 255, 0.6);
+  transform: scale(1.1);
 }
 
 form {
@@ -89,17 +135,87 @@ form {
   align-items: center;
 }
 
-#reset-btn {
-  border: 2px solid black;
-  padding: 10px;
-  background-color: rgb(164, 204, 244);
-  border-radius: 4px;
-  margin-top: 20px;
-}
-
 #result-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+span {
+  font-weight: bold;
+  font-size: 28px;
+}
+
+/* Apply this class to your element */
+.shimmer-shadow {
+  animation: shimmer 3s ease-in-out infinite;
+}
+
+/* Shimmering sparkle animation */
+@keyframes shimmer {
+  0%,
+  100% {
+    box-shadow: 0 0 20px rgba(102, 126, 234, 0.5),
+      0 0 40px rgba(118, 75, 162, 0.3), 0 0 60px rgba(102, 126, 234, 0.2);
+  }
+  25% {
+    box-shadow: 0 0 30px rgba(118, 75, 162, 0.6),
+      0 0 60px rgba(102, 126, 234, 0.4), 0 0 90px rgba(118, 75, 162, 0.3),
+      -20px -20px 40px rgba(255, 255, 255, 0.1);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(102, 126, 234, 0.7),
+      0 0 80px rgba(118, 75, 162, 0.5), 0 0 120px rgba(102, 126, 234, 0.4),
+      20px -20px 60px rgba(255, 215, 255, 0.2);
+  }
+  75% {
+    box-shadow: 0 0 30px rgba(118, 75, 162, 0.6),
+      0 0 60px rgba(102, 126, 234, 0.4), 0 0 90px rgba(118, 75, 162, 0.3),
+      20px 20px 40px rgba(255, 255, 255, 0.1);
+  }
+}
+
+/* Alternative: Simpler pulsing glow */
+.pulse-shadow {
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    box-shadow: 0 0 20px rgba(99, 102, 241, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(99, 102, 241, 0.8),
+      0 0 60px rgba(99, 102, 241, 0.4);
+  }
+}
+
+/* Alternative: Rotating gradient glow */
+.rotate-shadow {
+  animation: rotate 4s linear infinite;
+}
+
+@keyframes rotate {
+  0% {
+    box-shadow: 20px 0 40px rgba(236, 72, 153, 0.6),
+      -20px 0 40px rgba(59, 130, 246, 0.6);
+  }
+  25% {
+    box-shadow: 0 20px 40px rgba(236, 72, 153, 0.6),
+      0 -20px 40px rgba(59, 130, 246, 0.6);
+  }
+  50% {
+    box-shadow: -20px 0 40px rgba(236, 72, 153, 0.6),
+      20px 0 40px rgba(59, 130, 246, 0.6);
+  }
+  75% {
+    box-shadow: 0 -20px 40px rgba(236, 72, 153, 0.6),
+      0 20px 40px rgba(59, 130, 246, 0.6);
+  }
+  100% {
+    box-shadow: 20px 0 40px rgba(236, 72, 153, 0.6),
+      -20px 0 40px rgba(59, 130, 246, 0.6);
+  }
 }

@@ -25,7 +25,7 @@ function calculateResult(e) {
 
   result.innerText = finalResult;
 
-  const charity = finalResult - preCharity;
+  const charity = Math.ceil(finalResult - preCharity);
   console.log(charity);
 
   charityAmount.innerText = charity;
